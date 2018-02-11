@@ -1,0 +1,179 @@
+
+.title {
+    font-family: 'Anton', cursive;
+    font-size: 30px;
+    color:#00b7ef;
+    padding-left: 1%;
+    margin-top: 1%;
+}
+
+h1 {
+    font-family: 'Anton', cursive;
+    font-size: 40px;
+    color:black;
+    text-align: center;
+}
+
+.text {
+    font-family: Arial;
+    font-size: 16px;
+    color: #c1bfc0;
+    height: 100px;
+    padding-left: 1%;
+    margin-top:1%;
+}
+
+.author {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 24px;
+    color:black;
+    text-align: right;
+    padding-right: 1%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.date {
+    font-family: 'Poiret One', cursive;
+    font-size: 16px;
+    color: lightgrey;
+    margin-top: -1%;
+    margin-left: 1%;
+    background-color: white;
+    position: absolute;
+}
+
+.messageOne {
+    font-family: Arial;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    margin-left:41%;
+}
+
+.messageTwo {
+    font-family: Arial;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    margin-left: 25%;
+}
+
+#textBox {
+    margin: auto;
+    display: block;
+    padding-left: 15%;
+    width: 100%;
+    padding-right: 15%;
+    position: relative;
+}
+
+.post-wrapper {
+    border: 2px solid #00b7ef;
+    margin-top:4%;
+}
+
+#id_posts_author{
+    font-family: Arial;
+    font-size: 16px;
+    color:black;
+    text-align: left;
+}
+
+#textField {
+    width:98%;
+    max-width:98%;
+    height:100px;
+    max-height: 200px;
+    font-size:14px;
+    overflow: scroll;
+}
+
+#authorField {
+    text-align: left;
+    font-family: Arial;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: 16px;
+    width: 160px;
+    display: block;
+}
+
+#titleField {
+    text-align: left;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.submit-form {
+    display: block;
+    padding-left: 14%;
+    /* margin-right: 17%; */
+    padding-right: 14%;
+    margin-top: 3%;
+}
+
+button-wrapper button, .btn-default {
+    color: white;
+    width: 68px;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom,#fff 0,#66CDAA 1%);
+}
+
+button-wrapper button, .delete.btn-default {
+    color: white;
+    width: 68px;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom,#fff 0,red 1%);
+}
+
+
+.post-form {
+    border:2px dashed #00b7ef
+}
+
+.button-wrapper {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 1px dashed black;
+    padding-left: 41%;
+}
+
+.button-wrapper-bottom {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 1px dashed black;
+    padding-left: 41%;
+}
+
+label {
+    display:none;
+}
+
+p {
+    margin-left:1%;
+    margin-top:1%;
+}
+
+.page-header {
+    border-bottom: none;
+}
+
+i {
+    color: white;
+}
+
+#add {
+    margin-left: 6%;
+    background-color:#66CDAA
+}
+
+#delete {
+    background-color:red
+}
+
+#save {
+    background-color:#66CDAA
+}

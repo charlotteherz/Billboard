@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+	<meta charset="utf-8">
+	<title>Billboard</title>
+	{% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Pinyon+Script|Poiret+One" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="{% static 'js/Billboard_app.js' %}"></script>
+	<link href="{% static 'css/Billboard_app.css' %}" rel="stylesheet" type="text/css">
+</head> 
+<body>
+
+<div class = "page-header">
+    <h1 class = "heading">Billboard</h1>
+</div>
+
+<div class = "content-container">
+    <div class = "row">
+        <div class = "col-md-8" id ="textBox">
+            {% if latest_post_list %}
+                {% for post in latest_post_list %}
+            <div class = "post-wrapper">
+                    <div class = "date">{{post.posts_pub_date|date:"12/3/2015"}}</div>
+                    <div class = "title">{{post.posts_title}}</div>
+                    <div class = "text">{{post.posts_text}}</div>
+                    <div class = "author">{{post.posts_author}}</div>
+            </div>
+                {% endfor %}
+
+            {% else %}
+                <div class = "error-container">
+                    <div class = "row">
+                       <div class = "col-md-12">
+                            <span class = "messageOne">No Messages...</span><br/>
+                            <span class = "messageTwo">Click the '+' button to add a new message</span><br/>
+                        </div>
+                    </div>
+                </div>
+            <div class = "button-wrapper">
+                    <button type="submit" class="add btn btn-default" id="add">+</button>
+            </div>
+
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{% block content %}
+{% endblock %}
+<div class = "collapse-form">
+    <div class = "submit-form">
+        <div class = "form-wrapper">
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                 <div class = "button-wrapper-bottom">
+                     <button type="reset" class="delete btn btn-default" id="delete"><i class="fa fa-times" aria-hidden="true"></i> </button>
+                     <button type="submit" class="save btn btn-default" id="save"><i class="fa fa-check" aria-hidden="true"></i></button>
+                 </div>
+            </form>
+        </div>
+</div>
+
+</div>
+
+
+</body> 
+</html>
